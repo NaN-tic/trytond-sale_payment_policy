@@ -1,0 +1,87 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:sale.payment.policy,create_date:"
+msgid "Create Date"
+msgstr "Data creació"
+
+msgctxt "field:sale.payment.policy,create_uid:"
+msgid "Create User"
+msgstr "Usuari creació"
+
+msgctxt "field:sale.payment.policy,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:sale.payment.policy,invoice_method:"
+msgid "Invoice Method"
+msgstr "Mètode de facturació"
+
+msgctxt "field:sale.payment.policy,payment_type:"
+msgid "Payment Type"
+msgstr "Tipus de pagaments"
+
+msgctxt "field:sale.payment.policy,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:sale.payment.policy,shipment_method:"
+msgid "Shipment Method"
+msgstr "Mètode d'enviament"
+
+msgctxt "field:sale.payment.policy,shop:"
+msgid "Shop"
+msgstr "Botiga"
+
+msgctxt "field:sale.payment.policy,write_date:"
+msgid "Write Date"
+msgstr "Data modificació"
+
+msgctxt "field:sale.payment.policy,write_uid:"
+msgid "Write User"
+msgstr "Usuari modificació"
+
+msgctxt "field:sale.shop,payment_policies:"
+msgid "Payment Policies"
+msgstr "Polítiques de pagament"
+
+msgctxt "model:sale.payment.policy,name:"
+msgid "Sale Payment Policy"
+msgstr "Política de pagament en les comandes"
+
+msgctxt "selection:sale.payment.policy,invoice_method:"
+msgid "Manual"
+msgstr "Manual"
+
+msgctxt "selection:sale.payment.policy,invoice_method:"
+msgid "On Order Processed"
+msgstr "Al procesar la comanda"
+
+msgctxt "selection:sale.payment.policy,invoice_method:"
+msgid "On Shipment Sent"
+msgstr "Al enviar-ho"
+
+msgctxt "selection:sale.payment.policy,shipment_method:"
+msgid "Manual"
+msgstr "Manual"
+
+msgctxt "selection:sale.payment.policy,shipment_method:"
+msgid "On Invoice Paid"
+msgstr "Al pagar la factura"
+
+msgctxt "selection:sale.payment.policy,shipment_method:"
+msgid "On Order Processed"
+msgstr "Al procesar la comanda"
+
+msgctxt "view:sale.payment.policy:"
+msgid "Payment Policies"
+msgstr "Polítiques de pagament"
+
+msgctxt "view:sale.payment.policy:"
+msgid "Payment Policy"
+msgstr "Política de pagament"
+
+msgctxt "view:sale.shop:"
+msgid "Payment Policies"
+msgstr "Polítiques de pagament"
