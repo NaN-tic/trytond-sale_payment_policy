@@ -27,20 +27,20 @@ for dep in info.get('depends', []):
 requires.append('trytond >= %s.%s, < %s.%s' %
         (major_version, minor_version, major_version, minor_version + 1))
 
-setup(name='trytond_sale_payment_policy',
+setup(name='trytonzz_sale_payment_policy',
     version=info.get('version', '0.0.1'),
     description='This module allows to manage methods by payment',
     author='Zikzakmedia SL',
     author_email='zikzak@zikzakmedia.com',
     url='http://www.zikzakmedia.com',
-    download_url="https://bitbucket.org/zikzakmedia/trytond-sale_payment_policy",
-    package_dir={'trytond.modules.sale_payment_policy': '.'},
+    download_url="https://bitbucket.org/zikzakmedia/trytonzz-sale_payment_policy",
+    package_dir={'trytonzz.modules.sale_payment_policy': '.'},
     packages=[
-        'trytond.modules.sale_payment_policy',
-        'trytond.modules.sale_payment_policy.tests',
+        'trytonzz.modules.sale_payment_policy',
+        'trytonzz.modules.sale_payment_policy.tests',
     ],
     package_data={
-        'trytond.modules.sale_payment_policy': info.get('xml', []) \
+        'trytonzz.modules.sale_payment_policy': info.get('xml', []) \
             + ['tryton.cfg', 'locale/*.po'],
     },
     classifiers=[
@@ -63,9 +63,9 @@ setup(name='trytond_sale_payment_policy',
     install_requires=requires,
     zip_safe=False,
     entry_points="""
-    [trytond.modules]
-    sale_payment_policy = trytond.modules.sale_payment_policy
+    [trytonzz.modules]
+    sale_payment_policy = trytonzz.modules.sale_payment_policy
     """,
     test_suite='tests',
-    test_loader='trytond.test_loader:Loader',
+    test_loader='trytonzz.test_loader:Loader',
 )
