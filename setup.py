@@ -33,14 +33,14 @@ setup(name='trytonzz_sale_payment_policy',
     author='Zikzakmedia SL',
     author_email='zikzak@zikzakmedia.com',
     url='http://www.zikzakmedia.com',
-    download_url="https://bitbucket.org/zikzakmedia/trytonzz-sale_payment_policy",
-    package_dir={'trytonzz.modules.sale_payment_policy': '.'},
+    download_url="https://bitbucket.org/zikzakmedia/trytond-sale_payment_policy",
+    package_dir={'trytond.modules.sale_payment_policy': '.'},
     packages=[
-        'trytonzz.modules.sale_payment_policy',
-        'trytonzz.modules.sale_payment_policy.tests',
+        'trytond.modules.sale_payment_policy',
+        'trytond.modules.sale_payment_policy.tests',
     ],
     package_data={
-        'trytonzz.modules.sale_payment_policy': info.get('xml', []) \
+        'trytond.modules.sale_payment_policy': info.get('xml', []) \
             + ['tryton.cfg', 'locale/*.po'],
     },
     classifiers=[
@@ -63,9 +63,9 @@ setup(name='trytonzz_sale_payment_policy',
     install_requires=requires,
     zip_safe=False,
     entry_points="""
-    [trytonzz.modules]
-    sale_payment_policy = trytonzz.modules.sale_payment_policy
+    [trytond.modules]
+    sale_payment_policy = trytond.modules.sale_payment_policy
     """,
     test_suite='tests',
-    test_loader='trytonzz.test_loader:Loader',
+    test_loader='trytond.test_loader:Loader',
 )
