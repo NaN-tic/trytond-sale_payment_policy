@@ -37,8 +37,8 @@ envío y facturación según el tipo de pago especificado en la tienda.
 
 .. figure:: images/sale-payment-policy.png
 
-Módulos que dependen
-====================
+Módulos de los que depende
+==========================
 
 Instalados
 ----------
