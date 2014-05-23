@@ -46,19 +46,20 @@ class Sale:
     party = fields.Many2One('party.party', 'Party', required=True, select=True,
         states={
             'readonly': Eval('state') != 'draft',
-            }, on_change=['party', 'payment_term', 'shop', 'payment_type'],
+            },
         depends=['state', 'shop', 'payment_type'])
     payment_type = fields.Many2One('account.payment.type',
-        'Payment Type', states=_STATES, 
-        on_change=['shop', 'payment_type'],
+        'Payment Type', states=_STATES,
         depends=['state'])
 
+    @fields.depends('party', 'payment_term', 'shop', 'payment_type')
     def on_change_party(self):
         changes = super(Sale, self).on_change_party()
         self.payment_type = changes.get('payment_type', None)
         changes.update(self.on_change_payment_type())
         return changes
 
+    @fields.depends('shop', 'payment_type')
     def on_change_payment_type(self):
         changes = {}
         PaymentPolicy = Pool().get('sale.payment.policy')
