@@ -16,9 +16,8 @@ class SalePaymentPolicy(ModelSQL, ModelView):
     'Sale Payment Policy'
     __name__ = 'sale.payment.policy'
     _rec_name = 'payment_type'
-
-    payment_type = fields.Many2One('account.payment.type', "Payment Type",
-                                   required=True)
+    payment_type = fields.Many2One('account.payment.type', 'Payment Type',
+        required=True)
     invoice_method = fields.Selection([
             ('manual', 'Manual'),
             ('order', 'On Order Processed'),
@@ -35,22 +34,12 @@ class SalePaymentPolicy(ModelSQL, ModelView):
 
 class SaleShop:
     __name__ = 'sale.shop'
-
     payment_policies = fields.One2Many('sale.payment.policy', 'shop',
-                                     "Payment Policies")
+        'Payment Policies')
 
 
 class Sale:
     __name__ = 'sale.sale'
-
-    party = fields.Many2One('party.party', 'Party', required=True, select=True,
-        states={
-            'readonly': Eval('state') != 'draft',
-            },
-        depends=['state', 'shop', 'payment_type'])
-    payment_type = fields.Many2One('account.payment.type',
-        'Payment Type', states=_STATES,
-        depends=['state'])
 
     @fields.depends('party', 'payment_term', 'shop', 'payment_type')
     def on_change_party(self):
