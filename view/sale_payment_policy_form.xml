@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!-- This file is part sale_payment_policy module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full
+copyright notices and license terms. -->
+<form string="Payment Policy" col="4">
+    <label name="payment_type"/>
+    <field name="payment_type"/>
+    <label name="invoice_method"/>
+    <field name="invoice_method"/>
+    <label name="shipment_method"/>
+    <field name="shipment_method"/>
+</form>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!-- This file is part sale_payment_policy module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full
+copyright notices and license terms. -->
+<data>
+    <xpath
+            expr="/form/notebook/page[@id='general']"
+            position="after">
+        <page string="Payment Policies" id="payment_policies" col="4">
+            <field name="payment_policies" colspan="4"
+                    view_ids="sale_payment_policy.sale_payment_policy_view_tree"/>
+        </page>
+    </xpath>
+</data>
