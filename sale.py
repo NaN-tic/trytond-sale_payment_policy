@@ -6,7 +6,6 @@ from trytond.pool import Pool, PoolMeta
 from trytond.pyson import Eval
 
 __all__ = ['SalePaymentPolicy', 'SaleShop', 'Sale']
-__metaclass__ = PoolMeta
 
 _STATES = {
     'readonly': Eval('state') != 'draft',
@@ -33,12 +32,14 @@ class SalePaymentPolicy(ModelSQL, ModelView):
 
 
 class SaleShop:
+    __metaclass__ = PoolMeta
     __name__ = 'sale.shop'
     payment_policies = fields.One2Many('sale.payment.policy', 'shop',
         'Payment Policies')
 
 
 class Sale:
+    __metaclass__ = PoolMeta
     __name__ = 'sale.sale'
 
     @fields.depends('shop', 'payment_type')
